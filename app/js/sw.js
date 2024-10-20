@@ -58,7 +58,7 @@ self.addEventListener("fetch", (event) => {
     // when seeking an HTML page
     if (event.request.mode === "navigate") {
         // Return to the index.html page
-        event.respondWith(caches.match("/"));
+        event.respondWith(caches.match("/toff-24/"));
         return;
     }
 
