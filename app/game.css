@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "QuickSand-Regular";
+    src: url("./fonts/Quicksand-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "QuickSand-Light";
+    src: url("./fonts/Quicksand-Light.otf") format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'QuickSand-Light', Arial, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.header {
+    border: 1px solid rgba(255, 21, 40, 0);
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: right;
+}
+
+.footerMain {
+    border: 3px solid rgba(15, 255, 20, 0);
+    width: 100%;
+    padding: 0;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.footer {
+    border: 3px solid rgba(15, 255, 20, 0);
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 70px;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+}
+
+.left {
+    width: 5%;
+    float: left;
+    padding: 0;
+    border: 1px solid rgba(15, 255, 40, 0);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.main {
+    width: 100%;
+    float: left;
+    padding: 0;
+    border: 1px solid rgba(255, 0, 250, 0);
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.right {
+    width: 5%;
+    float: left;
+    padding: 0;
+    border: 1px solid rgba(15, 210, 240, 0);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.puzzleContainer {
+    border: 1px solid rgba(255, 0, 0, 0);
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.puzzleOverlay {
+    border: 1px solid rgba(0, 255, 0, 0);
+    width: 300px;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.puzzleOverlay.show {
+    opacity: 0.99;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#gridCanvas {
+    border: 5px solid #3a7d8d;
+    margin: 0;
+}
+
+.iconImg {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.iconImg.fade {
+    opacity: 1;
+}
+
+.logoImg {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.logoImg.fade {
+    opacity: 1;
+}
+
+#tutorial {
+    animation-name: blinking;
+    animation-duration: 1.7s;
+    animation-iteration-count: 0;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.stats {
+    background-color: rgb(233, 236, 221);
+    color: rgb(0, 87, 95);
+    padding-top: 20px;
+    font-size: 20px;
+    height: 100%;
+    overflow: auto;
+}
+
+.stats b {
+    font-family: 'QuickSand-Regular', Arial, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+.stats p {
+    font-family: 'QuickSand-Light', Arial, sans-serif;
+}
+
+.stats img {
+    margin: 1px 10px 15px 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.stats table {
+    border-collapse: collapse;
+}
+
+.stats td {
+    padding: 8px;
+    border: none;
+}
+
+.stats tr {
+    border: none;
+}
+
+.completedStats {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.historyStats {
+    opacity: 0;
+    display: none;
+    /* visibility: hidden; */
+    transition: opacity 0.8s;
+}
+
+.completedStats.hide {
+    opacity: 0;
+    display: none;
+}
+
+.historyStats.show {
+    opacity: 1;
+    display: inline;
+    /* visibility: visible; */
+}

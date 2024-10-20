@@ -1,0 +1,14 @@
+{
+  "name": "Quadratis",
+  "short_name": "Quadratis",
+  "icons": [
+    {
+      "src": "icons/quadratis192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}
