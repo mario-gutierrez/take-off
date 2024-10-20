@@ -19,9 +19,17 @@
 
 .header {
     border: 1px solid rgba(255, 21, 40, 0);
-    padding-top: 20px;
+    padding-top: 5vw;
+    padding-right: 5vw;
+
     background-color: rgba(255, 255, 255, 0);
     text-align: right;
+}
+
+.header-images img {
+    margin-left: 3vw;
+    height: 9vh;
+
 }
 
 .footerMain {
@@ -141,9 +149,11 @@
     0% {
         opacity: 0.2;
     }
+
     50% {
         opacity: 1.0;
     }
+
     100% {
         opacity: 0.2;
     }
