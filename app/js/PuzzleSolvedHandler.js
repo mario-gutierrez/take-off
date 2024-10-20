@@ -122,51 +122,9 @@ class PuzzleSolvedHandler {
 
     FillInStats(time, moves, score, newTimeRecord, newMovesRecord, newScoreRecord, movesSpeed) {
         try {
-            let timeText = document.getElementById("timeToComplete");
-            window.timeRecord = "Time: " + time;
-            timeText.innerHTML = window.timeRecord;
-            if (!isTutorial && newTimeRecord) {
-                timeText.style.color = PuzzleTools.ColorPalette().innerRingClr;
-                // alternate text: time <-> New PB!
-                setInterval(function() {
-                    let timeText = document.getElementById("timeToComplete");
-                    if (timeText.innerHTML == window.timeRecord) {
-                        timeText.innerHTML = "New PB!";
-                    } else {
-                        timeText.innerHTML = window.timeRecord;
-                    }
-                }, 1500);
-            }
-            let movesText = document.getElementById("movesToComplete");
-            window.movesRecord = "Moves: " + moves;
-            movesText.innerHTML = window.movesRecord;
-            if (!isTutorial && newMovesRecord) {
-                movesText.style.color = PuzzleTools.ColorPalette().outterRingClr;
-                // alternate text: moves <-> New PB!
-                setInterval(function() {
-                    let movesText = document.getElementById("movesToComplete");
-                    if (movesText.innerHTML == window.movesRecord) {
-                        movesText.innerHTML = "New PB!";
-                    } else {
-                        movesText.innerHTML = window.movesRecord;
-                    }
-                }, 1500);
-            }
-            let scoreText = document.getElementById("score");
-            window.scoreRecord = "Score: " + score;
-            scoreText.innerHTML = window.scoreRecord;
-            if (!isTutorial && newScoreRecord) {
-                // alternate text: score <-> New PB!
-                setInterval(function() {
-                    let scoreText = document.getElementById("score");
-                    if (scoreText.innerHTML == window.scoreRecord) {
-                        scoreText.innerHTML = "New PB!";
-                    } else {
-                        scoreText.innerHTML = window.scoreRecord;
-                    }
-                }, 1500);
-            }
 
+            let movesText = document.getElementById("movesToComplete");
+            movesText.innerHTML = moves;
             //fill in historic stats table
             document.getElementById("histRecentTime").innerHTML = time + "";
             document.getElementById("histRecentMoves").innerHTML = moves + "";
@@ -190,15 +148,15 @@ function storageAvailable(type) {
         return true;
     } catch (e) {
         return e instanceof DOMException && (
-                // everything except Firefox
-                e.code === 22 ||
-                // Firefox
-                e.code === 1014 ||
-                // test name field too, because code might not be present
-                // everything except Firefox
-                e.name === 'QuotaExceededError' ||
-                // Firefox
-                e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
             // acknowledge QuotaExceededError only if there's something already stored
             (storage && storage.length !== 0);
     }
