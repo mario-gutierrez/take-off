@@ -131,7 +131,8 @@ puzzleJson = {
     [-1, -1, 1, -1, -1]],
     "links": [{ "id": 0, "tblr": [0, 0, 4, 1] }, { "id": 1, "tblr": [1, 1, 0, 2] }, { "id": 2, "tblr": [22, 7, 1, 3] }, { "id": 3, "tblr": [3, 3, 2, 4] }, { "id": 4, "tblr": [4, 4, 3, 0] }, { "id": 7, "tblr": [2, 12, 7, 7] }, { "id": 12, "tblr": [7, 17, 12, 12] }, { "id": 17, "tblr": [12, 22, 17, 17] }, { "id": 22, "tblr": [17, 2, 22, 22] }],
     "backgroundColor": "#111111", "defaultScramble": 0, "randomMoves": 0,
-    "puzzleName": "Take Off III"
+    "puzzleName": "Take Off III",
+    "movesToWin": 10
 };
 
 window.onresize = InitBoard;
