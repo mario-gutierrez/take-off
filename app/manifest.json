@@ -1,14 +1,15 @@
 {
-  "name": "Quadratis",
-  "short_name": "Quadratis",
+  "name": "Take Off - Quadratis",
+  "short_name": "take off",
   "icons": [
     {
       "src": "icons/quadratis192.png",
-      "sizes": "192x192",
+      "sizes": "72x72 96x96 192x192",
       "type": "image/png"
     }
   ],
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000"
+  "background_color": "#111111",
+  "theme_color": "#111111"
 }
