@@ -29,39 +29,15 @@
             <div class="stats">
                 <div id="completedStats" class="completedStats">
                     <center>
-                        <span id="statsOverlayTitle"><b>Puzzle completed</b></span>
-                    </center>
-                    <br>
-
-                    <table style="margin-left: 20%;">
-                        <tr>
-                            <td>
-                                <span id="timeToComplete"></span>
-                            </td>
-                            <td><canvas id="statsTimeRing" width="27" height="27"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="movesToComplete"></span>
-                            </td>
-                            <td><canvas id="statsMovesRing" width="27" height="27"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="statsOverlayScoreRow_td1"><span id="score"></span></span>
-                            </td>
-                            <td>
-                                <span id="statsOverlayScoreRow_td2"> <canvas id="scoreCanvas" width="27"
-                                        height="27"></span>
-                            </td>
-                        </tr>
-                    </table>
-                    <center>
-                        <div id="statsOverlayStatsIcon">
-                            <br>
-                            <img src="icons/statsMainIcon.png" id="statsIconButton" width="50">
-                            <br>
+                        <b>Puzzle completed in</b>
+                        <br><br>
+                        <div class="circle">
+                            <span id="movesToComplete">99</span>
                         </div>
+                        <br>
+                        <b>moves</b>
+                        <br>
+                        <br>
                     </center>
                 </div>
                 <div id="historyStats" class="historyStats">
@@ -105,11 +81,6 @@
                         <br>
                     </center>
                 </div>
-
-                <center>
-                    <img src="icons/statsReplayIcon.png" id="replayIcon" width="41" onclick="ReloadPuzzle()">
-                    <img src="icons/statsForwardIcon.png" id="forwardIcon" width="41" onclick="ForwardPuzzle()">
-                </center>
             </div>
         </div>
     </div>
