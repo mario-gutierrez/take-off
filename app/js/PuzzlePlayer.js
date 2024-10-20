@@ -106,69 +106,6 @@ function ShowPuzzleSolution() {
     footerDiv.appendChild(thumbnail);
 }
 
-function SetupHeader(canvasSize) {
-    let headerDiv = document.getElementById("header");
-    headerDiv.innerHTML = "";
-    let headerHeight = Math.round(canvasSize * 0.2);
-    headerDiv.style.width = Math.round(window.innerWidth) + "px";
-    headerDiv.style.height = headerHeight + "px";
-    logoSize = canvasSize * 0.15;
-
-    let icons = ["back", "replay"];
-    let elements = icons.length;
-    let iconSize = logoSize;
-    let margin = Math.round((window.innerWidth - (elements + 1) * iconSize) / (elements + 2));
-
-    for (let i = 0; i < icons.length; i++) {
-        let imgTag = document.createElement("img");
-        imgTag.src = "img/icon_" + icons[i] + ".png";
-        imgTag.width = iconSize;
-        imgTag.style.marginRight = margin + "px";
-        imgTag.className = "iconImg";
-        imgTag.id = icons[i];
-        headerDiv.appendChild(imgTag);
-    }
-
-    let logoElement = PuzzleTools.GetQuadratisLogoInCanvas(logoSize, puzzleJson.backgroundColor);
-    headerDiv.appendChild(logoElement);
-    logoElement.id = "quadratisLogo";
-    logoElement.className = "logoImg";
-    logoElement.style.marginRight = margin + "px";
-
-    PuzzleTools.SetClickEvent(logoElement, function () {
-        let logo = document.getElementById("quadratisLogo");
-        logo.classList.toggle("fade");
-        for (let i = 0; i < icons.length; i++) {
-            let button = document.getElementById(icons[i]);
-            button.classList.toggle("fade");
-        }
-    });
-
-
-    PuzzleTools.SetClickEvent(document.getElementById("back"), function () {
-        if (document.getElementById("back").classList.value.includes("fade")) {
-            GoBackToHomeScreen();
-        }
-    });
-
-    PuzzleTools.SetClickEvent(document.getElementById("replay"), function () {
-        if (document.getElementById("replay").classList.value.includes("fade")) {
-            location.reload();
-        }
-    });
-
-    PuzzleTools.SetClickEvent(document.getElementById("statsIconButton"), function () {
-
-        //document.getElementById("completedStats").classList.toggle("hide");
-        //document.getElementById("historyStats").classList.toggle("show");
-
-        //console.log(document.getElementById("completedStats").classList);
-    });
-
-
-    return headerHeight;
-}
-
 function InitBoard() {
     puzzleHasStarted = false;
     let mainDiv = document.getElementById("mainDiv");
@@ -179,7 +116,6 @@ function InitBoard() {
     canvasSize = canvasSize > maxCanvasSize ? maxCanvasSize : canvasSize;
     document.getElementById("puzzleOverlay").style.width = Math.round(canvasSize * 1.1) + "px";
     let centralDiv = document.getElementById("centralDiv");
-    let headerHeight = SetupHeader(canvasSize);
     centralDiv.style.height = canvasSize + "px";
     centralDiv.style.marginTop = 80 + "px";
 
