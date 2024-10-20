@@ -8,6 +8,15 @@
     src: url("./fonts/Quicksand-Light.otf") format("opentype");
 }
 
+body,
+html {
+    background-color: #111111;
+    opacity: 0;
+    /* Start hidden */
+    animation: fadeIn 0.8s forwards;
+    /* Fade in effect */
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -184,4 +193,11 @@
     opacity: 1;
     display: inline;
     /* visibility: visible; */
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
