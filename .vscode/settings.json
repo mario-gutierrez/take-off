@@ -1,0 +1,13 @@
+{
+    "[javascript]": {
+      "editor.formatOnSave": true
+    },"[html]": {
+      "editor.formatOnSave": true
+    },"[css]": {
+      "editor.formatOnSave": true
+    },
+    "jshint.options": {
+        "esversion": 6
+    },
+    "files.insertFinalNewline": true
+}
