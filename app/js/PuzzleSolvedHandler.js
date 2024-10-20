@@ -49,7 +49,6 @@ class PuzzleSolvedHandler {
         movesText.innerHTML = totalMoves;
         var div_winner = document.getElementById("puzzleOverlay");
         div_winner.style.pointerEvents = "visible";
-        div_winner.style.opacity = 0.99;
         div_winner.classList.toggle('show');
 
         if (this.puzzle.totalMoves > 0) {
