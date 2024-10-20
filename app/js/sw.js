@@ -37,6 +37,8 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
     console.log('Service worker activate event!');
+    console.log('Claiming control');
+    return self.clients.claim();
 });
 
 // When there's an incoming fetch request, try and respond with a precached resource, otherwise fall back to the network
