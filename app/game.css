@@ -134,7 +134,7 @@
     font-weight: bold;
     height: 100%;
     overflow: auto;
-    font-size: xx-large;
+    font-size: 3vw;
 
 }
 
@@ -165,8 +165,7 @@
 .completedStats {
     opacity: 0.9;
     transition: opacity 0.5s;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin: 3vh;
 }
 
 .historyStats {
