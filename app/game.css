@@ -114,49 +114,6 @@
     transition: opacity 0.5s ease-in-out;
 }
 
-#gridCanvas {
-    border: 5px solid #3a7d8d;
-    margin: 0;
-}
-
-.iconImg {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.iconImg.fade {
-    opacity: 1;
-}
-
-.logoImg {
-    opacity: 0.5;
-    transition: opacity 0.5s;
-}
-
-.logoImg.fade {
-    opacity: 1;
-}
-
-#tutorial {
-    animation-name: blinking;
-    animation-duration: 1.7s;
-    animation-iteration-count: 0;
-}
-
-@keyframes blinking {
-    0% {
-        opacity: 0.2;
-    }
-
-    50% {
-        opacity: 1.0;
-    }
-
-    100% {
-        opacity: 0.2;
-    }
-}
-
 .circle {
     width: 8vw;
     height: 8vw;
@@ -181,13 +138,9 @@
 
 }
 
-.stats b {
-    letter-spacing: 0.01em;
-    font-weight: bold;
-}
-
 .stats p {
     font-family: 'QuickSand-Light', Arial, sans-serif;
+    font-size: small;
 }
 
 .stats img {
@@ -212,8 +165,8 @@
 .completedStats {
     opacity: 0.9;
     transition: opacity 0.5s;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
 .historyStats {
