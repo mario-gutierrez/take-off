@@ -5,6 +5,7 @@ let thumbnailSize = 100;
 let logoSize = 50;
 let puzzleHasStarted = false;
 let isTutorial = false;
+let puzzleSolvedInMinimalMoves = false;
 
 function RenderPuzzle(puzzleDefinition, puzzleDiv, canvasSize) {
     let canvas = document.createElement("canvas");
@@ -38,7 +39,8 @@ function RenderPuzzle(puzzleDefinition, puzzleDiv, canvasSize) {
     solvedHandler = new PuzzleSolvedHandler(puzzleDefinition.puzzleName, puzzleObject);
 
     puzzleObject.puzzleSolvedCallback = function () {
-        solvedHandler.ShowCompletionStats(isTutorial);
+        let stats = solvedHandler.ShowCompletionStats(isTutorial);
+        puzzleSolvedInMinimalMoves = stats.puzzleSolvedInMinimalMoves;
     }
 }
 
@@ -106,7 +108,11 @@ function ForwardPuzzle() {
 }
 
 function ReloadPuzzle() {
-    location.reload();
+    if (!puzzleSolvedInMinimalMoves) {
+        location.reload();
+    } else {
+        console.log("puzzle was solved in minimal movements");
+    }
 }
 
 function GoBackToHomeScreen() {

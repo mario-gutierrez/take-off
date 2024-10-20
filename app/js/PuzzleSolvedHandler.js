@@ -63,9 +63,11 @@ class PuzzleSolvedHandler {
         if (totalMoves <= this.puzzle.puzzleDefinition.movesToWin) {
             winMessage.innerHTML = "YOU WIN";
             canDoBetterMsg.innerHTML = "";
+            this.puzzleStats.puzzleSolvedInMinimalMoves = true;
         } else {
             winMessage.innerHTML = "";
             canDoBetterMsg.innerHTML = "... but you can do better!";
+            this.puzzleStats.puzzleSolvedInMinimalMoves = false;
         }
         return this.puzzleStats;
     }
