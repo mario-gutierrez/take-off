@@ -235,10 +235,18 @@ let tutorials = [];
 let unsolvedTutorial = 0;
 let selectedCell;
 
-puzzleJson = { colors: 3, rows: 5, cols: 5, colorsTable: ["#7E2884", "#9DD9D9", "#D44587"], layout: [[-1, -1, 0, -1, -1], [-1, -1, 1, -1, -1], [0, 1, 2, 1, 0], [-1, -1, 1, -1, -1], [-1, -1, 0, -1, -1]], links: [{ id: 2, tblr: [22, 7, 1, 3] }, { id: 7, tblr: [2, 12, 6, 8] }, { id: 10, tblr: [5, 15, 14, 11] }, { id: 11, tblr: [6, 16, 10, 12] }, { id: 12, tblr: [7, 17, 11, 13] }, { id: 13, tblr: [8, 18, 12, 14] }, { id: 14, tblr: [9, 19, 13, 10] }, { id: 17, tblr: [12, 22, 16, 18] }, { id: 22, tblr: [17, 2, 21, 23] }], puzzleName: "Online-Cross", backgroundColor: "#000000", defaultScramble: -1, randomMoves: 30, scoreParams: { t0: 20, t1: 40, t2: 42, ct: 0.5, m0: 20, m1: 40, m2: 46, cm: 1 } };
-if (!('backgroundColor' in puzzleJson)) {
-    puzzleJson.backgroundColor = "#111111";
-}
+puzzleJson = {
+    "colors": 4, "rows": 5, "cols": 5,
+    "colorsTable": ["#9DD9D9", "#7E2884", "#D44587", "#EBEBEB"],
+    "layout": [[1, 0, 1, 0, 1],
+    [-1, -1, 0, -1, -1],
+    [-1, -1, 1, -1, -1],
+    [-1, -1, 0, -1, -1],
+    [-1, -1, 1, -1, -1]],
+    "links": [{ "id": 0, "tblr": [0, 0, 4, 1] }, { "id": 1, "tblr": [1, 1, 0, 2] }, { "id": 2, "tblr": [22, 7, 1, 3] }, { "id": 3, "tblr": [3, 3, 2, 4] }, { "id": 4, "tblr": [4, 4, 3, 0] }, { "id": 7, "tblr": [2, 12, 7, 7] }, { "id": 12, "tblr": [7, 17, 12, 12] }, { "id": 17, "tblr": [12, 22, 17, 17] }, { "id": 22, "tblr": [17, 2, 22, 22] }],
+    "backgroundColor": "#111111", "defaultScramble": -1, "randomMoves": 10,
+    "puzzleName": "Take Off III"
+};
 
 window.onresize = InitBoard;
 
