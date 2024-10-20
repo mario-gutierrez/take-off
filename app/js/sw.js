@@ -4,7 +4,7 @@ const CACHE_NAME = `take-off-${VERSION}`;
 const APP_STATIC_RESOURCES = [
     "/toff-24/",
     "/toff-24/puzzle.html",
-    "/toff-24/manifest.json",
+    "/manifest.json",
     "/toff-24/fonts/Quicksand-Light.otf",
     "/toff-24/fonts/Quicksand-Regular.otf",
     "/toff-24/game.css",
@@ -20,13 +20,13 @@ const APP_STATIC_RESOURCES = [
     "/toff-24/js/PuzzleRenderer.js",
     "/toff-24/js/MathemaAPI.js",
     "/toff-24/img/icon_replay.png",
-    "/toff-24/img/takeoff_logo.png",
+    "/img/takeoff_logo.png",
     "/toff-24/img/icon_back.png",
     "/toff-24/icons/statsReplayIcon.png",
     "/toff-24/icons/statsMainIcon.png",
     "/toff-24/icons/quadratis192.png",
-    "/toff-24/intro.css",
-    "/toff-24/index.html"
+    "/intro.css",
+    "/index.html"
 ];
 
 self.addEventListener("install", (event) => {
