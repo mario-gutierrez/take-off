@@ -39,57 +39,7 @@ function RenderPuzzle(puzzleDefinition, puzzleDiv, canvasSize) {
     solvedHandler = new PuzzleSolvedHandler(puzzleDefinition.puzzleName, puzzleObject);
 
     puzzleObject.puzzleSolvedCallback = function () {
-
         solvedHandler.ShowCompletionStats(isTutorial);
-
-
-        if (gameStatus != null) {
-            if (("percentScoresPerPuzzle" in gameStatus)) {
-                for (let s = 0; s < gameStatus.percentScoresPerPuzzle.length; s++) {
-                    if (gameStatus.percentScoresPerPuzzle[s].puzzleName == puzzleDefinition.puzzleName) {
-                        gameStatus.percentScoresPerPuzzle[s].moveScore = puzzleObject.moveScorePercent;
-                        gameStatus.percentScoresPerPuzzle[s].timeScore = puzzleObject.timeScorePercent;
-                        break;
-                    }
-                }
-            }
-            gameStatus.puzzleStatus[selectedCell.y][selectedCell.x] = 3; // mark this puzzle as solved
-            //update adjacent cells
-            let rows = gameStatus.puzzleStatus.length;
-            let cols = gameStatus.puzzleStatus[0].length;
-            for (let r = 0; r < rows; r++) {
-                for (let c = 0; c < cols; c++) {
-                    let cell = gameStatus.puzzleStatus[r][c];
-                    if (r + 1 < rows) {
-                        let adjacent = gameStatus.puzzleStatus[r + 1][c];
-                        if (adjacent < cell) {
-                            gameStatus.puzzleStatus[r + 1][c] = cell - 1;
-                        }
-                    }
-                    if (c + 1 < cols) {
-                        let adjacent = gameStatus.puzzleStatus[r][c + 1];
-                        if (adjacent < cell) {
-                            gameStatus.puzzleStatus[r][c + 1] = cell - 1;
-                        }
-                    }
-                    if (r - 1 >= 0) {
-                        let adjacent = gameStatus.puzzleStatus[r - 1][c];
-                        if (adjacent < cell) {
-                            gameStatus.puzzleStatus[r - 1][c] = cell - 1;
-                        }
-                    }
-                    if (c - 1 >= 0) {
-                        let adjacent = gameStatus.puzzleStatus[r][c - 1];
-                        if (adjacent < cell) {
-                            gameStatus.puzzleStatus[r][c - 1] = cell - 1;
-                        }
-                    }
-                }
-            }
-
-            // console.log("game status: ");
-            // console.log(gameStatus);
-        }
     }
 }
 
@@ -117,7 +67,7 @@ function InitBoard() {
     document.getElementById("puzzleOverlay").style.width = Math.round(canvasSize * 1.1) + "px";
     let centralDiv = document.getElementById("centralDiv");
     centralDiv.style.height = canvasSize + "px";
-    centralDiv.style.marginTop = 80 + "px";
+    centralDiv.style.marginTop = "5vh";
 
     let footerDiv = document.getElementById("footerDiv");
     footerDiv.style.marginTop = canvasSize + "px";
