@@ -26,29 +26,29 @@ class Puzzle {
         this.preventMovesAfterSolved = true;
         //keep a log of moves done on this puzzle
         this.movesLog = [];
-        this.puzzleSolvedCallback = function() {
+        this.puzzleSolvedCallback = function () {
             console.log("Puzzle solved!");
         };
-        this.puzzleScrambledCallback = function() {
+        this.puzzleScrambledCallback = function () {
             console.log("Puzzle scrambled, ready to play!");
         };
-        this.puzzleMovedCallback = function() {};
+        this.puzzleMovedCallback = function () { };
 
-        this.tapCallback = function() {
+        this.tapCallback = function () {
             console.log("tap on puzzle, no further actions");
         };
 
-        this.handleTap = function(self) {
+        this.handleTap = function (self) {
             self.tapCallback();
         };
 
         this.initBoard();
 
-        this.prepActionsOnTap = function(self) {
+        this.prepActionsOnTap = function (self) {
             console.log("no prep actions on tap");
         };
 
-        this.furtherActionsOnTap = function(self) {
+        this.furtherActionsOnTap = function (self) {
             console.log("no further action on tap");
         };
     }
@@ -93,7 +93,7 @@ class Puzzle {
         this.renderer.render(this.blocksEngine.blocks, this.ctx);
 
         // let r = this.renderer;
-        let processSwipe = function(dir, startPoint, self) {
+        let processSwipe = function (dir, startPoint, self) {
             if (self.renderer.animating || (self.puzzleIsSolved && self.preventMovesAfterSolved)) return;
 
             clearInterval(self.swipeTimer);
@@ -164,7 +164,7 @@ class Puzzle {
                 let puzzleDefinition = self.puzzleDefinition;
                 let scrambles = [{ "puzzleName": "Take Off III", "scramble": [{ "block": 2, "dir": 1 }, { "block": 3, "dir": 2 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 3, "dir": 2 }, { "block": 3, "dir": 2 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 7, "dir": 1 }, { "block": 7, "dir": 1 }, { "block": 3, "dir": 2 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 2, "dir": 2 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 4, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 3, "dir": 2 }, { "block": 2, "dir": 1 }, { "block": 2, "dir": 3 }] }];
                 let scrambleSequences = [];
-                scrambles.forEach(function(element) {
+                scrambles.forEach(function (element) {
                     if (element.puzzleName == puzzleDefinition.puzzleName) {
                         scrambleSequences.push(element.scramble);
                         //console.log(element);
