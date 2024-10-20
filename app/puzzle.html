@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-title" content="Quadratis">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/quadratis192.png">
+    <link rel="stylesheet" href="game.css">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+</head>
+
+<body>
+    <div style="float: right;">
+        <div class="header" id="header">
+            <div class="header-images">
+                <img src="icons/statsMainIcon.png" />
+                <img src="icons/statsReplayIcon.png" onclick="ReloadPuzzle()" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main" id="centralDiv">
+        <div class="puzzleContainer" id="mainDiv"></div>
+        <div class="puzzleOverlay" id="puzzleOverlay">
+            <div class="stats">
+                <div id="completedStats" class="completedStats">
+                    <center>
+                        <b>Puzzle completed in</b>
+                        <p>&ThinSpace;</p>
+                        <div class="circle">
+                            <span id="movesToComplete"></span>
+                        </div>
+                        <p>&ThinSpace;</p>
+                        <b>moves</b><span id="canDoBetterMessage" style="font-weight: bold;"></span>
+                        <br>
+                        <span id="winMessage" style="font-size: xxx-large; font-weight: bold;"></span>
+                    </center>
+                </div>
+                <div id="historyStats" class="historyStats">
+                    <center><img src="icons/statsMainIcon.png" id="statsIcon" width="50" style="margin-bottom: 4px;">
+                        <table style="font-size: 17px; text-align: center;">
+                            <tr>
+                                <td><b>Time</b></td>
+                                <td><b>Moves</b></td>
+                                <td><b>Speed</b></td>
+                                <td><b>Score</b></td>
+                            </tr>
+                            <!-- <tr><td></td></tr> -->
+                            <tr style="background-color: #8DDADA40;">
+                                <td colspan="4"><b>Most recent</b></td>
+                            </tr>
+                            <tr style="font-size: 14px; background-color: #8DDADA40;">
+                                <td><span id="histRecentTime">1m20s</span></td>
+                                <td><span id="histRecentMoves">19</span></td>
+                                <td><span id="histRecentSpeed">3</span><span style="font-size: 10px;"> mov/s</span></td>
+                                <td><span id="histRecentScore">1234</span></td>
+                            </tr>
+                            <tr style="background-color: #E3C1C8; border-top: 7px solid rgb(233, 236, 221);">
+                                <td colspan="4"><b>Average</b></td>
+                            </tr>
+                            <tr style="font-size: 14px; background-color: #E3C1C8;">
+                                <td><span id="histAvgTime">1m15s</span></td>
+                                <td><span id="histAvgMoves">16</span></td>
+                                <td><span id="histAvgSpeed">0.02</span><span style="font-size: 10px;"> mov/s</span></td>
+                                <td><span id="histAvgScore">1000</span></td>
+                            </tr>
+                            <tr style="background-color: #8DDADA; border-top: 7px solid rgb(233, 236, 221);">
+                                <td colspan="4"><b>Best</b></td>
+                            </tr>
+                            <tr style="font-size: 14px; background-color: #8DDADA;">
+                                <td><span id="histBestTime">1m07s</span></td>
+                                <td><span id="histBestMoves">12</span></td>
+                                <td><span id="histBestSpeed">3</span><span style="font-size: 10px;"> mov/s</span></td>
+                                <td><span id="histBestScore">99999</span></td>
+                            </tr>
+                        </table>
+                        <br>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <div class="bottom" id="footerDiv"></div>
+    </center>
+</body>
+<script src="js/Vector.js"></script>
+<script src="js/blocksEngine.js"></script>
+<script src="js/SwipeHandler.js"></script>
+<script src="js/canvasEngine.js"></script>
+<script src="js/PuzzleRenderer.js"></script>
+<script src="js/PuzzleDisplayConfig.js"></script>
+<script src="js/Puzzle.js"></script>
+<script src="js/PuzzleTools.js"></script>
+<script src="js/PuzzleSolvedHandler.js"></script>
+<script src="js/MathemaAPI.js"></script>
+<script src="js/PuzzlePlayer.js"></script>
+
+</html>
