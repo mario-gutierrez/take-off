@@ -24,7 +24,6 @@ function RenderPuzzle(puzzleDefinition, puzzleDiv, canvasSize) {
     let _top = Math.floor((canvas.width - (_squareSize - _borderSize) * _maxNumOfSquares) / 2);
     let _left = Math.floor((canvas.height - (_squareSize - _borderSize) * puzzleDefinition.rows) / 2);
     let _borderColor = puzzleDefinition.backgroundColor;
-    console.log(_top + ", " + _left);
 
     let _displayConfig = new PuzzleDisplayConfig(_top, _left, _squareSize, _borderSize,
         _borderColor, puzzleDefinition.backgroundColor, puzzleDefinition.colorsTable);
