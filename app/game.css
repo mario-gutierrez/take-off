@@ -12,8 +12,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'QuickSand-Light', Arial, sans-serif;
-    font-weight: lighter;
     font-style: normal;
 }
 
@@ -108,6 +106,7 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     pointer-events: none;
+    font-family: 'QuickSand-Regular', Arial, sans-serif;
 }
 
 .puzzleOverlay.show {
@@ -169,22 +168,22 @@
     align-items: center;
     color: rgb(0, 87, 95);
     font-size: 4vw;
+    font-weight: bold;
 }
 
 .stats {
     background-color: rgb(233, 236, 221);
     color: rgb(0, 87, 95);
-    padding-top: 20px;
-    font-size: 20px;
+    font-weight: bold;
     height: 100%;
     overflow: auto;
+    font-size: xx-large;
+
 }
 
 .stats b {
-    font-family: 'QuickSand-Regular', Arial, sans-serif;
     letter-spacing: 0.01em;
     font-weight: bold;
-    font-size: xx-large;
 }
 
 .stats p {
@@ -211,8 +210,10 @@
 }
 
 .completedStats {
-    opacity: 1;
+    opacity: 0.9;
     transition: opacity 0.5s;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .historyStats {
