@@ -98,10 +98,9 @@
 
 .puzzleOverlay {
     border: 1px solid rgba(0, 255, 0, 0);
-    width: 300px;
+    width: 25vw;
     height: auto;
-    top: 0;
-    left: 0;
+    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -112,7 +111,7 @@
 }
 
 .puzzleOverlay.show {
-    opacity: 0.99;
+    opacity: 0.9;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -159,6 +158,19 @@
     }
 }
 
+.circle {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 5px solid rgb(0, 87, 95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 87, 95);
+    font-size: 4vw;
+}
+
 .stats {
     background-color: rgb(233, 236, 221);
     color: rgb(0, 87, 95);
@@ -171,6 +183,8 @@
 .stats b {
     font-family: 'QuickSand-Regular', Arial, sans-serif;
     letter-spacing: 0.01em;
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 .stats p {
