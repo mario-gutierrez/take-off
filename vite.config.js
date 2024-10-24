@@ -13,6 +13,9 @@ export default defineConfig({
     plugins: [
         VitePWA({
             registerType: 'autoUpdate',
+            workbox: {
+                globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+            },
             manifest: {
                 name: "Take Off - Quadratis",
                 short_name: "take off",
