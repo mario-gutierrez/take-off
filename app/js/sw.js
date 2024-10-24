@@ -3,30 +3,10 @@ const CACHE_NAME = `take-off-${VERSION}`;
 
 const APP_STATIC_RESOURCES = [
     "/",
-    "/puzzle.html",
-    "/manifest.json",
-    "/fonts/Quicksand-Light.otf",
-    "/fonts/Quicksand-Regular.otf",
-    "/game.css",
-    "/js/PuzzleSolvedHandler.js",
-    "/js/canvasEngine.js",
-    "/js/PuzzlePlayer.js",
-    "/js/blocksEngine.js",
-    "/js/Vector.js",
-    "/js/Puzzle.js",
-    "/js/PuzzleDisplayConfig.js",
-    "/js/PuzzleTools.js",
-    "/js/SwipeHandler.js",
-    "/js/PuzzleRenderer.js",
-    "/js/MathemaAPI.js",
-    "/img/icon_replay.png",
-    "/img/takeoff_logo.png",
-    "/img/icon_back.png",
-    "/icons/statsReplayIcon.png",
-    "/icons/statsMainIcon.png",
     "/icons/quadratis192.png",
-    "/intro.css",
-    "/index.html"
+    "/icons/quadratis512.png",
+    "/index.html",
+    "/js/circles.js"
 ];
 
 // When the service worker is installing, open the cache and add the precache resources to it
