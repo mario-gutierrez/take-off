@@ -14,19 +14,19 @@ export default defineConfig({
         VitePWA({
             registerType: 'autoUpdate',
             workbox: {
-                globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+                globPatterns: ['**/*.{js,css,html,png}']
             },
             manifest: {
                 name: "Take Off - Quadratis",
                 short_name: "take off",
                 icons: [
                     {
-                        src: "/icons/quadratis192.png",
-                        sizes: "72x72 96x96 192x192",
+                        src: "./icons/quadratis192.png",
+                        sizes: "192x192",
                         type: "image/png"
                     },
                     {
-                        src: "/icons/quadratis512.png",
+                        src: "./icons/quadratis512.png",
                         sizes: "512x512",
                         type: "image/png"
                     }
