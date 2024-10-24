@@ -1,8 +1,9 @@
 const isCodeSandbox = 'SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env
 import { resolve } from 'path'
+import { VitePWA } from 'vite-plugin-pwa'
 export default {
     root: 'app/',
-    publicDir: 'app/',
+    publicDir: 'app/img/',
     base: './',
     server:
     {
@@ -14,8 +15,6 @@ export default {
         minify: true,
         outDir: '../dist',
         emptyOutDir: true,
-        commonjsOptions: { include: [] },
-        sourcemap: true,
 
         rollupOptions: {
             input: {
@@ -26,5 +25,8 @@ export default {
     },
     optimizeDeps: {
         disabled: false,
-    }
+    },
+    plugins: [
+        VitePWA({ registerType: 'autoUpdate' })
+    ]
 }
