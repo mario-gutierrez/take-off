@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/toff-24",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#111111",
   "theme_color": "#111111"
